@@ -43,8 +43,8 @@ function operate() {
   }
 
   if (!isNaN(result)) {
-    expression = "∞";
-    input.value = "∞";
+    expression = result.toString()
+    input.value = "Infinity";
   }
 }
 

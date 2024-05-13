@@ -44,7 +44,7 @@ function operate() {
 
   if (!isNaN(result)) {
     expression = result.toString()
-    input.value = "Infinity";
+    input.value = expression;
   }
 }
 
@@ -61,7 +61,12 @@ function splitExpression(exp, symbol) {
     case "*":
       return num1 * num2;
     case "/":
-      return num1 / num2;
+      if (num2 === 0) {
+        return "Error: Division by zero";
+      } 
+      else {
+        return num1 / num2;
+      }
   }
 }
 
